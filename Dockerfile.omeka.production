@@ -1,0 +1,36 @@
+FROM php:8.2-apache
+
+RUN apt-get update && apt-get install -y \
+  unzip \
+  libfreetype6-dev \
+  libjpeg62-turbo-dev \
+  libpng-dev \
+  libzip-dev \
+  default-mysql-client \
+  curl \
+  && docker-php-ext-configure gd --with-freetype --with-jpeg \
+  && docker-php-ext-install pdo pdo_mysql gd zip \
+  && a2enmod rewrite \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /var/www/html
+
+RUN curl -L -o /tmp/omeka.zip https://github.com/omeka/omeka-s/releases/download/v4.1.1/omeka-s-4.1.1.zip \
+  && unzip /tmp/omeka.zip -d /tmp \
+  && cp -r /tmp/omeka-s/. /var/www/html \
+  && rm -rf /tmp/omeka.zip /tmp/omeka-s
+
+COPY omeka-files/files/ /var/www/html/files/
+
+RUN chown -R www-data:www-data /var/www/html/files \
+  && chmod -R 755 /var/www/html/files
+
+RUN printf '<Directory /var/www/html>\n\
+  AllowOverride All\n\
+  Require all granted\n\
+</Directory>\n' > /etc/apache2/conf-available/omeka.conf \
+  && a2enconf omeka
+
+EXPOSE 80
+
+CMD ["sh", "-c", "printf 'user=\"%s\"\\npassword=\"%s\"\\ndbname=\"%s\"\\nhost=\"%s\"\\n' \"$OMEKA_DB_USER\" \"$OMEKA_DB_PASSWORD\" \"$OMEKA_DB_NAME\" \"$OMEKA_DB_HOST\" > /var/www/html/config/database.ini && apache2-foreground"]

@@ -1,0 +1,12 @@
+# IDE
+.idea/
+
+# macOS
+.DS_Store
+**/.DS_Store
+__MACOSX/
+
+# Environment
+.env
+.env.*
+!.env.example
