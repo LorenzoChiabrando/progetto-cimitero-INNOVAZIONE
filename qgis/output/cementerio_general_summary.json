@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-05-15T16:32:22.990800+00:00",
+  "source": "OpenStreetMap via Overpass API (portable Python analysis)",
+  "cemetery": {
+    "name": "Cementerio General de Santiago",
+    "district": "Recoleta, Santiago, Chile",
+    "founded": 1821,
+    "lat": -33.418,
+    "lon": -70.6501,
+    "address": "Profesor Alberto Zañartu 951, Recoleta",
+    "anchor": "main_pedestrian_entrance",
+    "osm_polygon_id": "way/197839099"
+  },
+  "search_radius_m": 10000,
+  "buffer_rings_m": [
+    500,
+    1000,
+    2000,
+    5000,
+    10000
+  ],
+  "filtered_inside_polygon": 20,
+  "themes": {
+    "transport": {
+      "label": "Public Transport",
+      "color": "#1f6feb",
+      "count": 80,
+      "highlights": [
+        {
+          "name": "Cementerio General / Profesor Alberto Zañartu",
+          "subtype": "bus_stop",
+          "distance_m": 25,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "PB760-Profesor A. Zañartu / Esq. Monserrat",
+          "subtype": "bus_stop",
+          "distance_m": 57,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "PB1323-Profesor A. Zañartu / Esq. Monserrat",
+          "subtype": "bus_stop",
+          "distance_m": 178,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "PB1324-Parada / Hospital San José",
+          "subtype": "bus_stop",
+          "distance_m": 227,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "PB758-Parada / Hospital San José",
+          "subtype": "bus_stop",
+          "distance_m": 252,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "PB757-Santos Dumont / Esq. Avenida La Paz",
+          "subtype": "bus_stop",
+          "distance_m": 363,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Dr. Carlos Lorca T. / Esq. Avenida La Paz",
+          "subtype": "bus_stop",
+          "distance_m": 370,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "San José / Belisario Prats",
+          "subtype": "bus_stop",
+          "distance_m": 523,
+          "ring": "<=1000 m"
+        },
+        {
+          "name": "(M) Hospitales",
+          "subtype": "bus_stop",
+          "distance_m": 526,
+          "ring": "<=1000 m"
+        },
+        {
+          "name": "Hospital Clínico U. De Chile",
+          "subtype": "bus_stop",
+          "distance_m": 528,
+          "ring": "<=1000 m"
+        }
+      ]
+    },
+    "culture": {
+      "label": "Culture & Tourism",
+      "color": "#b8860b",
+      "count": 80,
+      "highlights": [
+        {
+          "name": "Information",
+          "subtype": "information",
+          "distance_m": 5,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Monumento La Dolorosa",
+          "subtype": "memorial",
+          "distance_m": 12,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Plaza La Paz",
+          "subtype": "ruins",
+          "distance_m": 40,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "José Joaquín Aguirre",
+          "subtype": "memorial",
+          "distance_m": 403,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Viewpoint",
+          "subtype": "viewpoint",
+          "distance_m": 430,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Viewpoint",
+          "subtype": "viewpoint",
+          "distance_m": 433,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Museo de Anatomía",
+          "subtype": "museum",
+          "distance_m": 437,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Centro Nacional de Recuperación Patrimonial MINSAL",
+          "subtype": "museum",
+          "distance_m": 509,
+          "ring": "<=1000 m"
+        },
+        {
+          "name": "Museo Nacional de Medicina Dr. Enrique Laval",
+          "subtype": "museum",
+          "distance_m": 524,
+          "ring": "<=1000 m"
+        },
+        {
+          "name": "Biblioteca Central",
+          "subtype": "library",
+          "distance_m": 530,
+          "ring": "<=1000 m"
+        }
+      ]
+    },
+    "services": {
+      "label": "Visitor Services",
+      "color": "#2f9e44",
+      "count": 80,
+      "highlights": [
+        {
+          "name": "Parking",
+          "subtype": "parking",
+          "distance_m": 12,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Parking",
+          "subtype": "parking",
+          "distance_m": 63,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Florist",
+          "subtype": "florist",
+          "distance_m": 91,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Florist",
+          "subtype": "florist",
+          "distance_m": 102,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Universidad de Chile (Campus Eloísa Díaz)",
+          "subtype": "parking",
+          "distance_m": 135,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "La Recoleta",
+          "subtype": "cafe",
+          "distance_m": 145,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Clinica Psiquiatrica Universitaria",
+          "subtype": "parking",
+          "distance_m": 177,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Askeroso",
+          "subtype": "fast_food",
+          "distance_m": 279,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Cafe",
+          "subtype": "cafe",
+          "distance_m": 317,
+          "ring": "<=500 m"
+        },
+        {
+          "name": "Parking",
+          "subtype": "parking",
+          "distance_m": 356,
+          "ring": "<=500 m"
+        }
+      ]
+    }
+  }
+}

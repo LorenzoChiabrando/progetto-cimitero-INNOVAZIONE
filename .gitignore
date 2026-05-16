@@ -1,5 +1,7 @@
 # IDE
 .idea/
+.claude/
+**/.claude/
 
 # macOS
 .DS_Store

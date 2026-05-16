@@ -60,6 +60,29 @@ services:
     environment:
       OMEKA_INTERNAL_API_URL: http://omeka-app/api
       NEXT_PUBLIC_OMEKA_PUBLIC_URL: http://localhost:8080
+      OMEKA_KEY_ID: GsAys5fqdD3nvGPXEQgexKefDfq58ODR
+      OMEKA_KEY_SECRET: ZhbKwCsrsuOFDd83pXgZtyniLMJcnpEN
+    depends_on:
+      omeka-app:
+        condition: service_healthy
+
+  # One-shot: esegue l'analisi GIS portable e carica i GeoJSON come Item+Media
+  # su Omeka S. Termina con exit 0 dopo l'upload. Idempotente.
+  qgis-loader:
+    build:
+      context: ./qgis/portable
+    image: mandringo02/demo-cemetery:qgis-loader
+    container_name: cimitero-qgis-loader
+    restart: "no"
+    environment:
+      OMEKA_INTERNAL_API_URL: http://omeka-app/api
+      OMEKA_KEY_ID: GsAys5fqdD3nvGPXEQgexKefDfq58ODR
+      OMEKA_KEY_SECRET: ZhbKwCsrsuOFDd83pXgZtyniLMJcnpEN
+      ITEM_IDENTIFIER: cementerio_general_qgis_analysis
+      ITEM_TITLE: "QGIS Analysis - Cementerio General"
+    volumes:
+      # Copia locale dei GeoJSON: utile per upload manuale in Omeka GUI
+      - ./qgis/output:/tmp/out
     depends_on:
       omeka-app:
         condition: service_healthy

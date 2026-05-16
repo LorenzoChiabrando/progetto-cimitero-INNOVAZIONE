@@ -1,5 +1,7 @@
 FROM php:8.2-apache
 
+RUN printf "display_errors = Off\nlog_errors = On\nupload_max_filesize = 200M\npost_max_size = 200M\nmemory_limit = 256M\n" > /usr/local/etc/php/conf.d/omeka.ini
+
 RUN apt-get update && apt-get install -y \
   unzip \
   libfreetype6-dev \
@@ -8,9 +10,10 @@ RUN apt-get update && apt-get install -y \
   libzip-dev \
   default-mysql-client \
   curl \
+  imagemagick \
   && docker-php-ext-configure gd --with-freetype --with-jpeg \
   && docker-php-ext-install pdo pdo_mysql gd zip \
-  && a2enmod rewrite \
+  && a2enmod rewrite headers \
   && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www/html
@@ -22,13 +25,22 @@ RUN curl -L -o /tmp/omeka.zip https://github.com/omeka/omeka-s/releases/download
 
 COPY omeka-files/files/ /var/www/html/files/
 
+RUN printf '<?php\nreturn [\n    "session_config" => [\n        "gc_maxlifetime" => 36000,\n        "gc_probability" => 1,\n        "gc_divisor"     => 100,\n    ],\n];\n' > /var/www/html/config/local.config.php
+
 RUN chown -R www-data:www-data /var/www/html/files \
   && chmod -R 755 /var/www/html/files
 
 RUN printf '<Directory /var/www/html>\n\
   AllowOverride All\n\
   Require all granted\n\
-</Directory>\n' > /etc/apache2/conf-available/omeka.conf \
+</Directory>\n\
+<Directory /var/www/html/files>\n\
+  Header set Access-Control-Allow-Origin "*"\n\
+  Header set Access-Control-Allow-Methods "GET, OPTIONS"\n\
+  Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept"\n\
+</Directory>\n\
+AddType model/gltf-binary .glb\n\
+AddType model/gltf+json .gltf\n' > /etc/apache2/conf-available/omeka.conf \
   && a2enconf omeka
 
 EXPOSE 80
