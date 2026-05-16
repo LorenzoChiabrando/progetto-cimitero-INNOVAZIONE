@@ -36,12 +36,12 @@ from pyproj import Transformer
 # ---------------------------------------------------------------------------
 
 CEMETERY_NAME = "Cementerio General de Santiago"
-# Ingresso pedonale principale: Prof. Alberto Zañartu 951, Recoleta.
-# Coordinate triangolate da OSM (bus stop "Cementerio General / Prof. A. Zañartu"
-# PB759 + tourism=information board sud-facing sul bordo del poligono).
-CEMETERY_LAT = -33.4180
-CEMETERY_LON = -70.6501
-CEMETERY_ADDRESS = "Profesor Alberto Zañartu 951, Recoleta"
+# Ingresso pedonale monumentale lato Av. La Paz, ancorato a "Monumento La Dolorosa"
+# (Albert-Ernest Carrier-Belleuse, 1873 — OSM node 5013108324, historic=memorial),
+# che sta in piazzale antistante l'arco d'ingresso pedonale principale.
+CEMETERY_LAT = -33.41808
+CEMETERY_LON = -70.6501863
+CEMETERY_ADDRESS = "Av. La Paz frente Cementerio General (Monumento La Dolorosa)"
 CEMETERY_FOUNDED = 1821
 CEMETERY_DISTRICT = "Recoleta, Santiago, Chile"
 CEMETERY_OSM_WAY_ID = 197839099
@@ -51,7 +51,7 @@ BUFFER_RINGS_M = [500, 1000, 2000, 5000, 10000]
 # Nessun POI interno al cimitero viene mantenuto: l'area è rappresentata solo
 # dal poligono, i punti interni sarebbero tombe/monumenti del cimitero stesso.
 ALLOW_INSIDE_CULTURE_SUBTYPES: set[str] = set()
-THEME_CAP = int(os.environ.get("THEME_CAP", "80"))
+THEME_CAP = int(os.environ.get("THEME_CAP", "400"))
 
 OVERPASS_MIRRORS = [
     "https://overpass-api.de/api/interpreter",

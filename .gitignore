@@ -3,6 +3,9 @@
 .claude/
 **/.claude/
 
+# Runtime tunnel state (cloudflared logs/pid + compose override)
+.tunnel/
+
 # macOS
 .DS_Store
 **/.DS_Store
