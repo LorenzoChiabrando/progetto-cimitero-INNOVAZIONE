@@ -1,0 +1,297 @@
+{
+    "greetings": [
+        "Hello! I'm the Cementerio General digital guide. I can help you with the site, the digital archive, or the cemetery's history. What would you like to know?",
+        "Welcome. Ask me anything about the cemetery, the archive, or how to use the platform.",
+        "Hi there. I can answer questions about the Cementerio General de Santiago and how to navigate this site."
+    ],
+    "fallback": "I'm not sure I have an answer for that yet. You could rephrase the question, or try one of these topics:",
+    "suggested_starters": [
+        "When was the cemetery founded?",
+        "How do I sign in as a researcher?",
+        "What collections are in the archive?",
+        "How do I bookmark a record?",
+        "Where is the cemetery located?"
+    ],
+    "entries": [
+        {
+            "id": "site-signin",
+            "category": "site",
+            "question": "How do I sign in?",
+            "tags": ["login", "sign in", "credentials", "account", "access", "log in"],
+            "answer": "Click the Sign In button in the top right corner. There are two demo accounts: admin/admin (Archivist Ophelia) with full editing privileges, and visitor/visitor (Researcher Arya) for the read-only personal area. The login page also shows two clickable chips that fill the form for you."
+        },
+        {
+            "id": "site-demo-accounts",
+            "category": "site",
+            "question": "What demo accounts are available?",
+            "tags": ["demo", "test users", "accounts", "credentials", "admin password", "visitor password"],
+            "answer": "Two demo profiles ship with the platform. The Archivist (admin / admin) can create, edit and delete records. The Researcher (visitor / visitor) cannot modify the archive but has a personal area with bookmarks, virtual tributes, private notes and visit history."
+        },
+        {
+            "id": "site-researcher-role",
+            "category": "site",
+            "question": "What can the researcher account do?",
+            "tags": ["visitor role", "researcher", "permissions", "what can I do as visitor"],
+            "answer": "The Researcher account is read-only on the archive but unlocks a personal area: bookmark records, light virtual tribute candles, take private notes, see your visit history, edit your research bio, and earn achievement badges. Everything is stored locally in your browser."
+        },
+        {
+            "id": "site-admin-role",
+            "category": "site",
+            "question": "What can the archivist account do?",
+            "tags": ["admin role", "archivist", "permissions", "add edit delete", "editing privileges"],
+            "answer": "The Archivist account has full CRUD on the Omeka archive: add new records with media, edit existing ones, delete user-created records (the three baseline showroom items are protected), and see an audit trail of recent activity on the dashboard."
+        },
+        {
+            "id": "site-bookmark",
+            "category": "site",
+            "question": "How do I bookmark a record?",
+            "tags": ["bookmark", "save", "favorites", "favourites"],
+            "answer": "Sign in with the visitor account, open any archive record, and use the Bookmark button in the Personal toolbox at the top of the page. Saved records appear under Bookmarks on your dashboard."
+        },
+        {
+            "id": "site-candle",
+            "category": "site",
+            "question": "How do I light a virtual candle?",
+            "tags": ["candle", "tribute", "remembrance", "memorial", "light a candle"],
+            "answer": "On any archive record, click Light a candle in the Personal toolbox. You can attach a short tribute message. Lit candles are shown in an expandable list on the record itself, and gathered in the Tributes tab of the researcher dashboard."
+        },
+        {
+            "id": "site-notes",
+            "category": "site",
+            "question": "How do I take a private note?",
+            "tags": ["notes", "annotation", "private notes", "research notes"],
+            "answer": "On any archive record, click Add note in the Personal toolbox. Notes are private and stored only in your browser (localStorage). You can edit or delete them from the same record page or from the Notes tab of your dashboard."
+        },
+        {
+            "id": "site-history",
+            "category": "site",
+            "question": "Where can I see my recent visits?",
+            "tags": ["visit history", "recently viewed", "history", "browse history"],
+            "answer": "The researcher dashboard has a Recent visits tab. Every time you open a record while logged in as visitor, it's tracked automatically (last 30 records). You can clear the history from the same tab."
+        },
+        {
+            "id": "site-storage",
+            "category": "site",
+            "question": "Where is my personal data stored?",
+            "tags": ["privacy", "data", "storage", "localstorage", "where is my data"],
+            "answer": "All visitor data — bookmarks, candles, notes, visit history, bio — lives in your browser's localStorage under keys prefixed with visitor_. Nothing is sent to a server. Clearing site data in your browser wipes everything."
+        },
+        {
+            "id": "site-add-record",
+            "category": "site",
+            "question": "How do I add a new record?",
+            "tags": ["add item", "create record", "new entry", "upload", "ingest"],
+            "answer": "Only the Archivist can add records. Sign in as admin, open the dashboard, and click Add new record. You'll be asked for title, collection, area, description and optional media. The item is pushed to Omeka through the server action."
+        },
+        {
+            "id": "site-edit-record",
+            "category": "site",
+            "question": "How do I edit a record?",
+            "tags": ["edit item", "update record", "modify"],
+            "answer": "As Archivist, open the dashboard and click the pencil icon on any record card (grid view) or row (table view). The Edit modal lets you update metadata and the cemetery area assignment."
+        },
+        {
+            "id": "site-delete-record",
+            "category": "site",
+            "question": "How do I delete a record?",
+            "tags": ["delete item", "remove record", "trash"],
+            "answer": "As Archivist, click the trash icon on a record card or row. A confirmation dialog will appear. The three baseline showroom items (IDs 57, 29, 23) are protected from deletion to keep the demo populated."
+        },
+        {
+            "id": "site-archive",
+            "category": "site",
+            "question": "How does the digital archive work?",
+            "tags": ["archive", "browse archive", "collections", "search"],
+            "answer": "The Digital Archive page lists every item stored in Omeka S. You can filter by collection, search by title, switch between grid and table views, and click any record to see full metadata, media, location on the cemetery map and (when available) a 3D model."
+        },
+        {
+            "id": "site-map",
+            "category": "site",
+            "question": "How do I use the interactive map?",
+            "tags": ["map", "interactive map", "areas", "navigation", "find tomb", "location"],
+            "answer": "Open Interactive Map from the header. The cemetery is divided into areas (Patios) that you can click; each area shows the archive items located there. From a record page you can also click the Location button to highlight its area on the map."
+        },
+        {
+            "id": "site-3d",
+            "category": "site",
+            "question": "Can I see 3D models?",
+            "tags": ["3d", "model", "gltf", "three dimensional"],
+            "answer": "Yes. Some records include a GLTF 3D scan of the tomb or sculpture. When present, a 3D viewer appears in the record's media gallery and you can rotate, zoom and pan the model interactively."
+        },
+        {
+            "id": "site-tts",
+            "category": "site",
+            "question": "Is there text-to-speech?",
+            "tags": ["text to speech", "tts", "audio", "listen", "accessibility"],
+            "answer": "Each record description has a small speaker button next to the Description label. Clicking it reads the description aloud using the browser's built-in speech synthesis."
+        },
+        {
+            "id": "site-dashboard",
+            "category": "site",
+            "question": "What does the dashboard show?",
+            "tags": ["dashboard", "profile", "stats"],
+            "answer": "The dashboard adapts to your role. The Archivist sees archive analytics, an audit trail and the full Contributions table. The Researcher sees a personal activity panel with badges, bookmarks, tributes, notes and visit history."
+        },
+        {
+            "id": "site-signout",
+            "category": "site",
+            "question": "How do I sign out?",
+            "tags": ["sign out", "logout", "log out", "end session"],
+            "answer": "Open the user menu in the top right corner (click your avatar) and choose Sign Out. The same option is available at the bottom of the dashboard hero card."
+        },
+        {
+            "id": "site-languages",
+            "category": "site",
+            "question": "What languages does the site support?",
+            "tags": ["languages", "translation", "spanish", "italian", "english"],
+            "answer": "The interface is currently in English. Archive content reflects the original Spanish names of people, monuments and places at Cementerio General de Santiago. Translation toggles are not yet exposed in the demo."
+        },
+        {
+            "id": "cemetery-founded",
+            "category": "cemetery",
+            "question": "When was Cementerio General founded?",
+            "tags": ["history", "year", "founded", "1821", "origin", "when"],
+            "answer": "The Cementerio General de Santiago was founded in 1821, shortly after Chile's independence. It is one of the oldest and largest cemeteries in Latin America."
+        },
+        {
+            "id": "cemetery-location",
+            "category": "cemetery",
+            "question": "Where is the cemetery located?",
+            "tags": ["where", "address", "santiago", "recoleta", "location", "city"],
+            "answer": "It is located in the Recoleta district of Santiago, Chile. The main entrance is on Avenida Profesor Alberto Zañartu, a short walk from the Cementerios metro station on Line 2."
+        },
+        {
+            "id": "cemetery-size",
+            "category": "cemetery",
+            "question": "How big is the cemetery?",
+            "tags": ["size", "area", "hectares", "how large", "how many graves"],
+            "answer": "The Cementerio General covers roughly 86 hectares and contains more than two million burials, making it one of the largest cemeteries in the Americas. It is organized into numerous Patios (sections) and avenues."
+        },
+        {
+            "id": "cemetery-famous",
+            "category": "cemetery",
+            "question": "Which famous people are buried there?",
+            "tags": ["famous burials", "presidents", "celebrities", "notable people", "who is buried"],
+            "answer": "Many Chilean Presidents (including Salvador Allende), writers, artists and scientists rest here. Notable figures include Violeta Parra, Víctor Jara, José Donoso and many former Heads of State. The Memorial del Detenido Desaparecido honours victims of the dictatorship."
+        },
+        {
+            "id": "cemetery-architecture",
+            "category": "cemetery",
+            "question": "What architectural styles can I see?",
+            "tags": ["architecture", "mausoleum", "style", "neoclassical", "art deco"],
+            "answer": "The cemetery is an open-air museum of funerary architecture: neoclassical mausoleums, Art Nouveau and Art Deco family vaults, indigenous-inspired monuments and modernist memorials all coexist along the main avenues."
+        },
+        {
+            "id": "cemetery-heritage",
+            "category": "cemetery",
+            "question": "Is the cemetery a heritage site?",
+            "tags": ["heritage", "patrimony", "monumento nacional", "protected", "unesco"],
+            "answer": "Yes. The Cementerio General was declared a Monumento Nacional in 2010 by Chile's Consejo de Monumentos Nacionales, recognising its historical, artistic and social significance."
+        },
+        {
+            "id": "cemetery-hours",
+            "category": "cemetery",
+            "question": "What are the visiting hours?",
+            "tags": ["hours", "open", "visiting", "schedule", "when can I visit"],
+            "answer": "The cemetery is generally open every day from around 8:30 to 18:00, with extended hours on weekends and during festivities such as the Día de los Difuntos (November 1–2). Please check the official site for current schedules before visiting."
+        },
+        {
+            "id": "cemetery-tours",
+            "category": "cemetery",
+            "question": "Are there guided tours?",
+            "tags": ["tours", "guided", "visit", "thematic walk"],
+            "answer": "Yes — thematic guided tours are offered regularly: history of the Republic, women in Chilean history, Art Deco architecture, and memory tours covering the 1973-1990 period. The digital archive also includes a Tours collection with self-guided routes."
+        },
+        {
+            "id": "cemetery-religion",
+            "category": "cemetery",
+            "question": "Is the cemetery religious or secular?",
+            "tags": ["religion", "catholic", "secular", "interfaith", "jewish"],
+            "answer": "The Cementerio General de Santiago is a public, non-confessional cemetery. It hosts Catholic, Protestant, Jewish, Orthodox and non-religious burials side by side, reflecting Chile's pluralistic history."
+        },
+        {
+            "id": "cemetery-allende",
+            "category": "cemetery",
+            "question": "Where is Salvador Allende buried?",
+            "tags": ["allende", "salvador allende", "president", "mausoleum"],
+            "answer": "President Salvador Allende's mausoleum is in a prominent location along one of the main avenues of the cemetery. It is a frequent pilgrimage site, especially around 11 September."
+        },
+        {
+            "id": "cemetery-memorial",
+            "category": "cemetery",
+            "question": "What is the Memorial del Detenido Desaparecido?",
+            "tags": ["memorial", "desaparecidos", "human rights", "dictatorship", "memory"],
+            "answer": "It is a large memorial wall inside the cemetery commemorating the people detained-disappeared and politically executed during the Chilean dictatorship (1973-1990). Their names are engraved on the wall."
+        },
+        {
+            "id": "cemetery-restoration",
+            "category": "cemetery",
+            "question": "Are there restoration projects?",
+            "tags": ["restoration", "conservation", "preservation", "project"],
+            "answer": "Yes. The cemetery's administration runs ongoing restoration programmes for historic mausoleums and sculptures, often in partnership with universities. The digital archive itself is part of a wider effort to document and preserve this heritage."
+        },
+        {
+            "id": "collections-overview",
+            "category": "collections",
+            "question": "What collections are in the archive?",
+            "tags": ["collections", "categories", "what's in the archive", "thematic"],
+            "answer": "The archive currently exposes five thematic collections: Historical Figures, Architecture, Remembrance, Tours and Maps. Each item is filed under one or more of these and you can filter by collection from the Digital Archive page."
+        },
+        {
+            "id": "collections-figures",
+            "category": "collections",
+            "question": "What is in the Historical Figures collection?",
+            "tags": ["historical figures", "people", "biographies", "personalities"],
+            "answer": "Historical Figures gathers biographical records of notable people buried at Cementerio General — politicians, artists, scientists and human-rights icons — with photos and short historical narratives."
+        },
+        {
+            "id": "collections-architecture",
+            "category": "collections",
+            "question": "What is in the Architecture collection?",
+            "tags": ["architecture collection", "mausoleums", "monuments", "buildings"],
+            "answer": "Architecture documents the most significant mausoleums, family vaults and funerary sculptures, with information on architects, materials and stylistic context."
+        },
+        {
+            "id": "collections-remembrance",
+            "category": "collections",
+            "question": "What is in the Remembrance collection?",
+            "tags": ["remembrance", "memorial", "memory", "commemoration"],
+            "answer": "Remembrance brings together memorials and commemorations of collective events — victims of the dictatorship, mass tragedies, civic figures — with photos and contextual texts."
+        },
+        {
+            "id": "collections-tours",
+            "category": "collections",
+            "question": "What is in the Tours collection?",
+            "tags": ["tours collection", "self guided", "routes", "walking tours"],
+            "answer": "Tours offers curated walking routes through the cemetery on themes such as Presidents of Chile, Women of the Republic, Architecture in Stone, and Memory and Human Rights. Each tour links to the records of its stops."
+        },
+        {
+            "id": "collections-maps",
+            "category": "collections",
+            "question": "What is in the Maps collection?",
+            "tags": ["maps", "plans", "cartography", "qgis", "geojson"],
+            "answer": "The Maps collection includes the digital plan of the cemetery, area polygons produced from QGIS analysis, and individual location references. These power the Interactive Map and the per-record location widget."
+        },
+        {
+            "id": "tech-stack",
+            "category": "technical",
+            "question": "What technology is this site built with?",
+            "tags": ["tech stack", "framework", "next.js", "omeka", "qgis", "stack"],
+            "answer": "The frontend is a Next.js app (App Router) talking to an Omeka S instance over its REST API. Spatial data is produced by a QGIS portable analysis pipeline. Everything runs in Docker Compose: database, Omeka, frontend, QGIS loader and this chatbot."
+        },
+        {
+            "id": "tech-chatbot",
+            "category": "technical",
+            "question": "How does this chatbot work?",
+            "tags": ["chatbot", "how it works", "ai", "model", "engine"],
+            "answer": "I'm a small FastAPI service in a separate Docker container. I match your message against a curated knowledge base of ~30 entries about the site and the cemetery, using TF-IDF cosine similarity. No external API and no LLM involved — fully offline, deterministic."
+        },
+        {
+            "id": "tech-issues",
+            "category": "technical",
+            "question": "Where do I report an issue?",
+            "tags": ["bug", "issue", "report", "feedback", "problem"],
+            "answer": "This is a university demo, so there is no public issue tracker. If you are part of the project team, please contact the maintainers directly or open a ticket in the internal repository."
+        }
+    ]
+}
