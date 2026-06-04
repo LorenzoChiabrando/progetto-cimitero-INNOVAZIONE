@@ -15,3 +15,27 @@ __MACOSX/
 .env
 .env.*
 !.env.example
+
+# Documentazione (committo a mano)
+*.md
+!README.md
+docs/
+
+# Archivi
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Script shell
+*.sh
+scripts/
+
+# Cloudflare / tunnel
+cloudflared/
+*.cloudflared
+cert.pem
+*.pem
+

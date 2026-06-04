@@ -25,10 +25,12 @@ RUN curl -L -o /tmp/omeka.zip https://github.com/omeka/omeka-s/releases/download
 
 COPY omeka-files/files/ /var/www/html/files/
 
+COPY omeka-modules/ThreeDViewer/ /var/www/html/modules/ThreeDViewer/
+
 RUN printf '<?php\nreturn [\n    "session_config" => [\n        "gc_maxlifetime" => 36000,\n        "gc_probability" => 1,\n        "gc_divisor"     => 100,\n    ],\n];\n' > /var/www/html/config/local.config.php
 
-RUN chown -R www-data:www-data /var/www/html/files \
-  && chmod -R 755 /var/www/html/files
+RUN chown -R www-data:www-data /var/www/html/files /var/www/html/modules \
+  && chmod -R 755 /var/www/html/files /var/www/html/modules
 
 RUN printf '<Directory /var/www/html>\n\
   AllowOverride All\n\
